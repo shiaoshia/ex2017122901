@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d("LOG","This is onCreate");
     }
 
     public void click01(View v){
@@ -30,5 +32,23 @@ public class MainActivity extends AppCompatActivity {
             "/"+R.drawable.pic);
         it.putExtra(Intent.EXTRA_STREAM, uri);
         startActivity(it);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("LOG","This is onResume");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("LOG","This is onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("LOG","This is onDestroy");
     }
 }
