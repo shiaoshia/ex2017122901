@@ -13,7 +13,7 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        
+
         tv01=findViewById(R.id.textView);
         Intent it = getIntent();
         String data = it.getStringExtra(Intent.EXTRA_TEXT);
